@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>To dos</title>
+  <link rel="stylesheet" href="stylesheets/index.css" type="text/css" media="all" />
+  <script type="text/javascript" src="javascripts/index.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
+  <script id="todoListTemplate" type="text/x-handlebars-template">
+    <ul class="todo">
+      {{#each todoItems}}
+        {{>todo}}
+      {{/each}}
+    </ul>
+  </script>
+  <script id="todoTemplate" type="text/x-handlebars">
+    <li data-id={{id}}>
+      {{title}}
+    </li>
+  </script>
+  <script id="confirmTemplate" type="text/x-handlebars-template">
+    <div class="confirmWrapper" data-id="{{id}}">
+      <p>Are you sure you want to delete this todo?</p>
+      <div class="actions">
+        <a href="#" class="confirm_yes">Yes</a>
+        <a href="#" class="confirm_no">No</a>
+      </div>
+    </div>
+  </script>
+  <script id="contextMenuTemplate" type="text/x-handlebars-template">
+    <div class="contextMenuWrapper" class="context-menu" data-id="{{id}}"> 
+        <ul class="menu"> 
+            <li class="edit">Edit</li> 
+            <li class="show">Show</li> 
+            <li class="delete">Delete</li>
+        </ul> 
+    </div> 
+  </script>
+</head>
+<body>
+  <h1>Todos</h1>
+  <div id="todoList">
+  </div>
+  <div class="overlay" style="display: none;"></div>
+  <div class="confirm_prompt" style="display: none;"></div>
+  <div class="context_menu" style="display: none;"></div>
+</body>

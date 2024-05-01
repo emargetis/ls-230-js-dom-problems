@@ -1,0 +1,9 @@
+.student-details {
+  background-color: Lightgray;
+  display: none;
+}
+
+dt {
+  float: left;
+  clear: left;
+}

@@ -1,0 +1,45 @@
+header {
+  background: #e29921;
+}
+
+h1 {
+  font-size: 2em;
+}
+
+#filters {
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+#filters select {
+  margin-right: 20px;
+}
+
+.car {
+    display: inline-block;
+    width: 200px;
+    margin: 20px 0 20px 20px;
+    border-radius: 4px;
+}
+
+.car h2, .car p, .car a {
+    margin-top: 5px;
+}
+
+.car a {
+    display: inline-block;
+    padding: 5px 10px;
+    background: #e29921;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+}
+
+.car img {
+  width: 100%;
+  position: relative;
+}
+
+.car h2 {
+  font-size: 1em;
+}

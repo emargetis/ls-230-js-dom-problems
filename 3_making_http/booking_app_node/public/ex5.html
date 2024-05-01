@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Schedules</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="/javascripts/ex5.js"></script>
+  <link rel="stylesheet" href="/stylesheets/ex5.css" type="text/css" media="all" >
+</head>
+<body>
+  <header>
+    <h1>Make a booking</h1>
+  </header>
+  <main>
+    <div class="schedule">
+      <h2>Schedules</h2>
+      <form id="schedule-form" action="#" method="post">
+        <dl>
+          <dt>
+            <label for="schedule-list">Please select one schedule:</label>
+          </dt>
+          <dd>
+            <select id="schedule-list" name="id">
+            </select>
+          </dd>
+          <dt>
+            <label for="email">Email:</label>
+          </dt>
+          <dd>
+            <input type="text" id="email" name="student_email" placeholder="example@mail.com">
+          </dd>
+        </dl>
+        <input id="schedule-submit" type="submit" value="Submit">
+      </form>
+    </div>
+    <div class="student-details">
+      <h2>Please provide new student details</h2>
+      <form id="student-details-form" action="#" method="post">
+        <dl>
+          <dt>
+            <label for="email-new">Email:</label>
+          </dt>
+          <dd>
+            <input type="text" id="email-new" name="email" placeholder="example@mail.com">
+          </dd>
+          <dt>
+            <label for="name">Name: </label>
+          </dt>
+          <dd>
+            <input type="text" id="name" name="name">
+          </dd>
+          <dt>
+            <label for="booking-sequence">Booking Sequence: </label>
+          </dt>
+          <dd>
+            <input type="text" id="booking-sequence" name="booking_sequence" readonly="true">
+          </dd>
+        </dl>
+        <input id="student-submit" type="submit" value="Submit">
+      </form>
+    </div>
+  </main>
+</body>

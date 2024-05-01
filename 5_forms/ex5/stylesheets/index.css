@@ -1,0 +1,20 @@
+label {
+  display: block;
+}
+
+fieldset{
+  border: none;
+}
+
+.result {
+  padding: 10px 5px 10px 5px;
+  box-sizing: border-box;
+}
+
+.result.correct{
+  border: 2px green solid;
+}
+
+.result.wrong{
+  border: 2px red solid;
+}

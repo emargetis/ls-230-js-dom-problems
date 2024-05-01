@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>your page title goes here</title>
+  <script type="text/javascript" src="javascripts/index.js"></script>
+  <link rel="stylesheet" href="stylesheets/index.css" type="text/css" media="all" />
+</head>
+<body>
+  <h1>Sign-up Form</h1>
+  <form novalidate>
+    <span class="error"></span>
+    <div id="firstNameField">
+      <label for="firstName">First Name*:</label>
+      <input type="text" id="firstName" name="firstName" pattern="[a-zA-Z'\s]+" required>
+      <span class="error"></span>
+    </div>
+    <div id="lastNameField">
+      <label for="lastName">Last Name*:</label>
+      <input type="text" id="lastName" name="lastName" pattern="[a-zA-Z'\s]+" required>
+      <span class="error"></span>
+    </div>
+    <div id="emailField">
+      <label for="email">Email*:</label>
+      <input type="text" id="email" name="email" pattern=".+@.+" required>
+      <span class="error"></span>
+    </div>
+    <div id="passwordField">
+      <label for="password">Password*:</label>
+      <input type="text" id="password" name="password" minlength="10" required>
+      <span class="error"></span>
+    </div>
+    <div id="phoneField">
+      <label for="phone">Phone Number:</label>
+      <input type="text" id="phone" name="phone" placeholder="111-222-3333" pattern="\d{3}-\d{3}-\d{4}">
+      <span class="error"></span>
+    </div>
+    <div id="creditField">
+      <label for="credit">Credit Card:</label>
+      <input type="text" id="credit" name="credit" placeholder="1111" maxlength="4" pattern="\d{4}"> -
+      <input type="text" id="credit" name="credit" placeholder="1111" maxlength="4" pattern="\d{4}"> -
+      <input type="text" id="credit" name="credit" placeholder="1111" maxlength="4" pattern="\d{4}"> -
+      <input type="text" id="credit" name="credit" placeholder="1111" maxlength="4" pattern="\d{4}">
+      <span class="error"></span>
+    </div>
+    <button type="submit">Sign Up</button>
+  </form>
+  <div id="serializedForm">
+    
+  </div>
+</body>

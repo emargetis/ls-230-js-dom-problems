@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Programming Languages</title>
+  <link rel="stylesheet" href="stylesheets/info.css" type="text/css" media="all" />
+  <script type="text/javascript" src="javascripts/info.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
+  <script id="langTemplate" type="text/x-handlebars-template">
+	  {{#each languages}}
+	  <div class="lang">
+  	  <h2>{{name}}</h2>
+      <p>
+        {{description}}
+      </p>
+      {{#if (descriptionLongEnough description)}}
+        <a href="#" class="more">Show More</a>
+      {{/if}}
+    </div>
+    {{/each}}
+  </script>
+</head>
+<body>
+  <h1>Programming Languages</h1>
+  <div id="languages">
+
+  </div>
+</body>

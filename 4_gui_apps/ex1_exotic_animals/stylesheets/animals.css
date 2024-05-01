@@ -1,0 +1,36 @@
+body {
+  background-color: #335;
+  color: white;
+}
+
+h1 {
+  text-align: center;
+}
+
+div {
+  display: block;
+}
+
+figure {
+  width: 20%;
+  margin-left: 2%;
+  display: inline-block;
+  margin-bottom: 20px;
+  vertical-align: top;
+  box-sizing: border-box;
+  padding: 10px;
+  background-color: #fff;
+  border-radius: 3px;
+  position: relative;
+}
+
+img {
+  width: 100%;
+}
+
+figcaption {
+  position: absolute;
+  display: none;
+  z-index: 5;
+  background: rgba(0, 0, 20, 0.7);
+}

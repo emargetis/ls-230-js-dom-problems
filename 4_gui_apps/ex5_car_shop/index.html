@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Used Cars</title>
+  <link rel="stylesheet" href="stylesheets/whitespace-reset.css" type="text/css" media="all" />
+  <link rel="stylesheet" href="stylesheets/index.css" type="text/css" media="all" />
+  <script type="text/javascript" src="javascripts/index.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
+  <script id="filterTemplate" type="text/x-handlebars-template">
+      <label for="make_select">Make</label>
+      <select name="make" id="make_select">
+        <option value="">All</option>
+        {{#each makes}}
+        <option value="{{make}}">{{make}}</option>
+        {{/each}}
+      </select>
+      <label for="model_select">Model</label>
+      <select name="model" id="model_select">
+        <option value="" selected>All</option>
+        {{#each models}}
+        <option value="{{model}}">{{model}}</option>
+        {{/each}}
+      </select>
+      <label for="price_select">Price</label>
+      <select name="price" id="price_select">
+        <option value="" selected>Any</option>
+        {{#each prices}}
+        <option value="{{price}}">{{price}}</option>
+        {{/each}}
+      </select>
+      <label for="year_select">Year</label></label>
+      <select name="year" id="year_select">
+        <option value="" selected>Any</option>
+        {{#each years}}
+        <option value="{{year}}">{{year}}</option>
+        {{/each}}
+      </select>
+      <button class="filter_btn">Filter</button>
+  </script>
+  <script id="carsTemplate" type="text/x-handlebars-template">
+    {{#each cars}}
+      {{>car}}
+    {{/each}}
+  </script>
+  <script id="carPartial" type="text/x-handlebars-template">
+    <div data-make="{{make}}" data-model="{{model}}" data-price="{{price}}" data-year="{{year}}" class="car">
+      <figure>
+        <img src="{{image}}"></img>
+      </figure>
+      <h2>{{make}} {{model}}</h2>
+      <p class="year">Year: {{year}}</p>
+      <p class="price">Price: {{price}}</p>
+      <a href="#">Buy</a>
+    </div>
+  </script>
+</head>
+<body>
+  <header>
+    <h1>Buy Used Cars</h1>
+    <div id="filters">
+    </div>
+  </header>
+  <main>
+    <div id="cars">
+    </div>
+  </main>
+</body>

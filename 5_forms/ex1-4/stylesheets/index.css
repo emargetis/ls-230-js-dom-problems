@@ -1,0 +1,20 @@
+div {
+  margin: 10px;
+}
+
+#credit {
+width: 40px;
+  
+}
+
+.invalid {
+  border: red 2px solid;
+}
+
+/* This is the style of our error messages */
+.error {
+  color: red;
+  border-radius: 0 0 5px 5px;
+
+  box-sizing: border-box;
+}

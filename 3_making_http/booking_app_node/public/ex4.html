@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Adding Schedules</title>
+  <script src="/javascripts/ex4.js"></script>
+  <link rel="stylesheet" href="/stylesheets/ex4.css" type="text/css" media="all" >
+</head>
+<body>
+  <header>
+    <button id="add-more">Add More Schedules</button>
+  </header>
+  <main>
+    <form action=# method="post">
+      <fieldset class="schedule">
+        <legend>Schedule 1</legend>
+        <dl>
+          <dt>
+            <label>Staff Name:</label>
+          </dt>
+          <dd>
+            <select class="staff-name" name="staff_id">
+            </select>
+          </dd>
+          <dt>
+            <label>Date: </label>
+          </dt>
+          <dd>
+            <input type="text" class="date" name="date" placeholder="mm-dd-yy">
+          </dd>
+          <dt>
+            <label>Time: </label>
+          </dt>
+          <dd>
+            <input type="text" class="time" name="time" placeholder="hh:mm">
+          </dd>
+        </dl>
+      </fieldset>
+      <input type="submit" value="Submit">
+    </form>
+  </main>
+</body>
